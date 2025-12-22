@@ -51,7 +51,9 @@ body {
   opacity: 0.95;
 }
 
-/* Profile Image */
+/* =========================
+   PROFILE IMAGE
+========================= */
 .profile-pic {
   width: 140px;
   height: 140px;
@@ -64,20 +66,25 @@ body {
 }
 
 /* =========================
-   HEADER ICONS (FIXED)
+   HEADER ICONS (FINAL FIX)
 ========================= */
 .links {
   margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
 }
 
 .links a {
-  display: inline-flex;        /* FIX: removes baseline gap */
-  align-items: center;         /* FIX: vertical centering */
-  margin: 0 14px;
+  display: flex;                 /* removes inline baseline completely */
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
   color: #ffffff;
   font-size: 22px;
-  line-height: 1;              /* FIX: removes descender space */
-  text-decoration: none;       /* FIX: removes underline */
+  line-height: 1;
+  text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -86,8 +93,14 @@ body {
   transform: translateY(-4px);
 }
 
+.links a::before,
+.links a::after {
+  content: none !important;      /* kills any pseudo underline */
+}
+
 .links i {
-  display: block;              /* FIX: prevents font baseline artifacts */
+  display: block;
+  line-height: 1;
 }
 
 /* =========================
@@ -183,11 +196,25 @@ h2 {
 }
 
 /* =========================
-   CONTACT
+   CONTACT ICONS
 ========================= */
-.section.gray p {
+.contact-list {
+  margin-top: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
   font-size: 0.95rem;
-  margin-bottom: 8px;
+  color: #e5e7eb;
+}
+
+.contact-item i {
+  color: #60a5fa;
+  font-size: 16px;
+  min-width: 20px;
 }
 
 /* =========================
