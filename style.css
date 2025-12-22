@@ -1,4 +1,4 @@
-/* =========================
+/* ========================= 
    GLOBAL RESET & BASE
 ========================= */
 * {
@@ -63,21 +63,31 @@ body {
   box-shadow: 0 0 25px rgba(96, 165, 250, 0.6);
 }
 
-/* Header Icons */
+/* =========================
+   HEADER ICONS (FIXED)
+========================= */
 .links {
   margin-top: 15px;
 }
 
 .links a {
+  display: inline-flex;        /* FIX: removes baseline gap */
+  align-items: center;         /* FIX: vertical centering */
   margin: 0 14px;
   color: #ffffff;
   font-size: 22px;
+  line-height: 1;              /* FIX: removes descender space */
+  text-decoration: none;       /* FIX: removes underline */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .links a:hover {
   color: #93c5fd;
   transform: translateY(-4px);
+}
+
+.links i {
+  display: block;              /* FIX: prevents font baseline artifacts */
 }
 
 /* =========================
