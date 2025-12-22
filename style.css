@@ -36,8 +36,16 @@ body {
 ========================= */
 .header {
   text-align: center;
-  padding: 60px 0;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  padding: 80px 0;
+  background:
+    linear-gradient(
+      rgba(15, 23, 42, 0.85),
+      rgba(15, 23, 42, 0.85)
+    ),
+    url("./assets/bg-dashboard.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .header h1 {
@@ -244,3 +252,4 @@ h2 {
     font-size: 1.5rem;
   }
 }
+
