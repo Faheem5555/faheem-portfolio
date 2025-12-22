@@ -1,4 +1,4 @@
-/* ========================= 
+/* =========================  
    GLOBAL RESET & BASE
 ========================= */
 * {
@@ -74,7 +74,7 @@ body {
 }
 
 /* =========================
-   HEADER ICONS (FINAL FIX)
+   HEADER ICONS
 ========================= */
 .links {
   margin-top: 15px;
@@ -84,7 +84,7 @@ body {
 }
 
 .links a {
-  display: flex;                 /* removes inline baseline completely */
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 42px;
@@ -103,7 +103,7 @@ body {
 
 .links a::before,
 .links a::after {
-  content: none !important;      /* kills any pseudo underline */
+  content: none !important;
 }
 
 .links i {
@@ -149,6 +149,44 @@ h2 {
   font-size: 0.85rem;
   color: #bfdbfe;
   border: 1px solid #334155;
+}
+
+/* =========================
+   CLIENTS SECTION (NEW)
+========================= */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.client-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-card img {
+  /* SAME SIZE FOR ALL LOGOS */
+  width: 110px;
+  height: 45px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.client-card span {
+  font-size: 0.8rem;
+  color: #cbd5f5;
+  text-align: center;
 }
 
 /* =========================
@@ -252,5 +290,3 @@ h2 {
     font-size: 1.5rem;
   }
 }
-
-
