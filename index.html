@@ -3,95 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mohammed Faheem Akthar | Data Analyst</title>
+  <title>Mohammed Faheem Akthar | Senior Data Analyst</title>
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 
 <body>
+
+<!-- ================= HEADER ================= -->
 <header class="header">
   <div class="container">
     <h1>Mohammed Faheem Akthar</h1>
-    <img src="./assets/profile.jpg" alt="Faheem profile photo" class="profile-pic">
-    <p>Senior Data Analyst | Power BI | SQL | BigQuery | UAE</p>
+
+    <img src="./assets/profile.jpg"
+         alt="Mohammed Faheem Akthar"
+         class="profile-pic">
+
+    <p>Senior Data Analyst | Power BI | BigQuery | SQL | UAE</p>
+
     <div class="links">
-      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Faheem5555" target="_blank">GitHub</a>
-      <a href="mailto:faheemdebi@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN"
+         target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="https://github.com/Faheem5555"
+         target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="mailto:faheemdebi@gmail.com"
+         title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
   </div>
 </header>
 
+<!-- ================= ABOUT ================= -->
 <section class="section">
   <div class="container">
     <h2>About Me</h2>
     <p>
-      Data Analyst with 5+ years of experience delivering enterprise Power BI dashboards,
-      SQL-based analytics, ETL validation, and cloud data modeling using BigQuery, GCP, and AtScale.
-      Currently based in UAE and available for immediate joining.
+      Senior Data Analyst with 5+ years of experience delivering enterprise-grade
+      Power BI and Tableau dashboards across retail, FMCG, and government domains.
+      Strong expertise in SQL-driven analytics, BigQuery, ETL validation, AtScale
+      semantic modeling, and cloud-scale data platforms. Currently based in the UAE
+      and available for immediate joining.
     </p>
   </div>
 </section>
 
+<!-- ================= SKILLS ================= -->
 <section class="section gray">
   <div class="container">
     <h2>Skills</h2>
-    <div class="skills">
-      <span>Power BI</span><span>DAX</span><span>SQL</span><span>PL/SQL</span>
-      <span>BigQuery</span><span>GCP</span><span>Python</span><span>AtScale</span>
-      <span>Tableau</span><span>ETL Validation</span><span>SSIS</span>
+
+    <div class="skills-group">
+      <h4>Data Analytics & BI</h4>
+      <div class="skills">
+        <span>Power BI</span>
+        <span>Tableau</span>
+        <span>DAX</span>
+        <span>Power Query</span>
+        <span>SSRS</span>
+        <span>Excel Dashboards</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <h4>Data Engineering & Modeling</h4>
+      <div class="skills">
+        <span>SQL</span>
+        <span>PL/SQL</span>
+        <span>BigQuery</span>
+        <span>Fact & Dimension Modeling</span>
+        <span>SCD</span>
+        <span>Partitioning</span>
+        <span>AtScale Semantic Cubes</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <h4>Cloud & ETL</h4>
+      <div class="skills">
+        <span>Google Cloud Platform</span>
+        <span>Cloud Storage</span>
+        <span>Pub/Sub</span>
+        <span>Dataflow</span>
+        <span>Airflow</span>
+        <span>SSIS</span>
+        <span>ETL Validation</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <h4>Programming & Tools</h4>
+      <div class="skills">
+        <span>Python</span>
+        <span>NoSQL (MongoDB)</span>
+        <span>GitHub</span>
+        <span>Jenkins</span>
+        <span>JIRA</span>
+        <span>Agile</span>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ================= PORTFOLIO ================= -->
 <section class="section">
   <div class="container">
-    <h2>Portfolio – Power BI Projects</h2>
+    <h2>Portfolio – Power BI Dashboards</h2>
 
     <div class="projects">
 
-      <div class="card">
-        <h3>Power BI Dataset Project 1</h3>
-        <p>Interactive Power BI dashboard using structured datasets for business insights.</p>
-        <a href="https://github.com/Faheem5555/PowerBI-Datasets-1" target="_blank">View on GitHub →</a>
+      <!-- Project 1 -->
+      <div class="card project-card">
+        <img src="./assets/dashboards/retail_kpi.png"
+             alt="Retail KPI Dashboard">
+
+        <h3>Retail KPI Performance Dashboard</h3>
+
+        <p>
+          Enterprise Power BI dashboard tracking sales, margin, and store-level KPIs.
+          Built on BigQuery with optimized DAX and star schema modeling to support
+          high-volume retail analytics.
+        </p>
+
+        <a href="https://github.com/Faheem5555/PowerBI-Datasets-1"
+           target="_blank" class="icon-link">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
 
-      <div class="card">
-        <h3>Power BI Dataset Project 2</h3>
-        <p>Dashboard demonstrating KPIs, trends, and drill-down analytics.</p>
-        <a href="https://github.com/Faheem5555/PowerBI-Datasets-2" target="_blank">View on GitHub →</a>
+      <!-- Project 2 -->
+      <div class="card project-card">
+        <img src="./assets/dashboards/sales_trends.png"
+             alt="Sales Trends Dashboard">
+
+        <h3>Sales & Trend Analysis Dashboard</h3>
+
+        <p>
+          Interactive dashboard highlighting revenue trends, YoY growth, and
+          category performance using advanced DAX, drill-downs, and KPI cards.
+        </p>
+
+        <a href="https://github.com/Faheem5555/PowerBI-Datasets-2"
+           target="_blank" class="icon-link">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
 
-      <div class="card">
-        <h3>Power BI Dataset Project 3</h3>
-        <p>Advanced Power BI visuals with DAX calculations and clean modeling.</p>
-        <a href="https://github.com/Faheem5555/PowerBI-Datasets-3" target="_blank">View on GitHub →</a>
-      </div>
+      <!-- Project 3 -->
+      <div class="card project-card">
+        <img src="./assets/dashboards/etl_validation.png"
+             alt="ETL Validation Dashboard">
 
-      <div class="card">
-        <h3>Power BI Dataset Project 4</h3>
-        <p>End-to-end Power BI reporting project using dataset transformations.</p>
-        <a href="https://github.com/Faheem5555/PowerBI-Datasets-4" target="_blank">View on GitHub →</a>
+        <h3>ETL Validation & Data Quality Dashboard</h3>
+
+        <p>
+          Data quality and ETL validation dashboard ensuring data completeness,
+          freshness, and accuracy across pipelines using SQL and Power BI.
+        </p>
+
+        <a href="https://github.com/Faheem5555/PowerBI-Datasets-3"
+           target="_blank" class="icon-link">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
 
     </div>
   </div>
 </section>
 
+<!-- ================= CONTACT ================= -->
 <section class="section gray">
   <div class="container">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:faheemdebi@gmail.com">faheemdebi@gmail.com</a></p>
-    <p>Phone: +971 569542474</p>
-    <p>Location: United Arab Emirates</p>
+    <p><strong>Email:</strong> faheemdebi@gmail.com</p>
+    <p><strong>Phone:</strong> +971 569542474</p>
+    <p><strong>Location:</strong> United Arab Emirates</p>
   </div>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
   <p>© <span id="year"></span> Mohammed Faheem Akthar</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
-
-
