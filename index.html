@@ -17,6 +17,9 @@
 
 <body>
 
+<!-- ================= BACKGROUND GLOBE ================= -->
+<canvas id="globeCanvas" aria-hidden="true"></canvas>
+
 <!-- ================= HAMBURGER MENU ================= -->
 <div class="menu-container">
   <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -41,7 +44,7 @@
 
     <img
       src="./assets/profile.jpg"
-      alt="Mohammed Faheem Akthar profile photo"
+      alt="Mohammed Faheem Akthar"
       class="profile-pic"
     >
 
@@ -66,12 +69,14 @@
       </a>
     </div>
 
-    <!-- Header CTAs -->
+    <!-- Header CTA Buttons -->
     <div class="header-actions">
-      <a href="./assets/Faheem_DA_UAE.pdf"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn-primary">
+      <a
+        href="./assets/Faheem_DA_UAE.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+      >
         <i class="fas fa-file-download"></i>
         Download Resume
       </a>
@@ -178,53 +183,32 @@
     <h2>Projects – Power BI Dashboards</h2>
 
     <div class="projects">
-
       <div class="card project-card">
-        <img
-          src="https://raw.githubusercontent.com/Faheem5555/PowerBI-Datasets-2/main/Snapshot%20of%20the%20Dahbaord.png"
-          alt="Sales KPI Dashboard"
-        >
+        <img src="https://raw.githubusercontent.com/Faheem5555/PowerBI-Datasets-2/main/Snapshot%20of%20the%20Dahbaord.png" alt="">
         <h3>Sales KPI & Performance Dashboard</h3>
         <p>Sales KPIs, trends, and category insights using optimized DAX.</p>
-        <a href="https://github.com/Faheem5555/PowerBI-Datasets-2"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="icon-link"
-           aria-label="GitHub Project">
+        <a href="https://github.com/Faheem5555/PowerBI-Datasets-2" target="_blank" class="icon-link">
           <i class="fab fa-github"></i>
         </a>
       </div>
 
       <div class="card project-card">
-        <img
-          src="https://raw.githubusercontent.com/Faheem5555/PowerBI-Datasets-3/main/Dashboard%20Preview.jpg"
-          alt="ETL Validation Dashboard"
-        >
+        <img src="https://raw.githubusercontent.com/Faheem5555/PowerBI-Datasets-3/main/Dashboard%20Preview.jpg" alt="">
         <h3>ETL Validation Dashboard</h3>
         <p>Data completeness and pipeline validation using SQL & Power BI.</p>
-        <a href="https://github.com/Faheem5555/PowerBI-Datasets-3"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="icon-link">
+        <a href="https://github.com/Faheem5555/PowerBI-Datasets-3" target="_blank" class="icon-link">
           <i class="fab fa-github"></i>
         </a>
       </div>
 
       <div class="card project-card">
-        <img
-          src="https://raw.githubusercontent.com/Faheem5555/PowerBI-Datasets-4/main/Bank%20dashboard%20preview.JPG"
-          alt="Banking Analytics Dashboard"
-        >
+        <img src="https://raw.githubusercontent.com/Faheem5555/PowerBI-Datasets-4/main/Bank%20dashboard%20preview.JPG" alt="">
         <h3>Banking Analytics Dashboard</h3>
         <p>Customer, transaction, and financial KPI analysis.</p>
-        <a href="https://github.com/Faheem5555/PowerBI-Datasets-4"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="icon-link">
+        <a href="https://github.com/Faheem5555/PowerBI-Datasets-4" target="_blank" class="icon-link">
           <i class="fab fa-github"></i>
         </a>
       </div>
-
     </div>
   </div>
 </section>
@@ -233,24 +217,18 @@
 <section class="section gray" id="contact">
   <div class="container">
     <h2>Contact</h2>
-
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i> faheemdebi@gmail.com
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-phone"></i> +971 569542474
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-location-dot"></i> United Arab Emirates
-    </div>
+    <div class="contact-item"><i class="fas fa-envelope"></i> faheemdebi@gmail.com</div>
+    <div class="contact-item"><i class="fas fa-phone"></i> +971 569542474</div>
+    <div class="contact-item"><i class="fas fa-location-dot"></i> United Arab Emirates</div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="footer">
   <p>© <span id="year"></span> Mohammed Faheem Akthar</p>
 </footer>
 
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -265,4 +243,3 @@
 
 </body>
 </html>
-
