@@ -1,379 +1,171 @@
-/* =========================
-   GLOBAL RESET & BASE
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:Segoe UI,Arial;
+  background:#0f172a;
+  color:#e5e7eb;
+  overflow-x:hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+/* 🌍 GLOBE */
+#globeCanvas{
+  position:fixed;
+  inset:0;
+  width:100vw;
+  height:100vh;
+  z-index:-1;
+  pointer-events:none;
+  opacity:0.75;
 }
 
-body {
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
-  line-height: 1.6;
-  overflow-x: hidden;
-  position: relative;
+/* LAYOUT */
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  position:relative;
+  z-index:1;
 }
 
-/* =========================
-   🌍 BACKGROUND GLOBE CANVAS
-========================= */
-#globeCanvas {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -3;
-  pointer-events: none;
-  opacity: 0.35; /* subtle but visible */
+.section{padding:60px 0}
+.section.gray{background:#020617}
+
+/* HEADER */
+.header{
+  text-align:center;
+  padding:100px 0;
+  background:linear-gradient(rgba(15,23,42,.65),rgba(15,23,42,.65));
 }
 
-/* =========================
-   LAYOUT
-========================= */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  position: relative;
-  z-index: 2;
+.header h1{font-size:2.6rem}
+.header p{margin-top:10px}
+
+/* PROFILE */
+.profile-pic{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:3px solid #60a5fa;
+  margin:20px auto;
+  display:block;
 }
 
-.section {
-  padding: 60px 0;
+/* ICONS */
+.links{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  margin-top:15px;
 }
 
-.section.gray {
-  background: #020617;
+.links a{
+  width:40px;height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  color:#fff;
+  transition:.25s;
+}
+.links a:hover{color:#93c5fd;transform:translateY(-3px)}
+
+/* BUTTONS */
+.header-actions{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
 }
 
-/* =========================
-   HEADER
-========================= */
-.header {
-  text-align: center;
-  padding: 100px 0 85px;
-  background:
-    linear-gradient(
-      rgba(15, 23, 42, 0.78),
-      rgba(15, 23, 42, 0.78)
-    ),
-    url("https://raw.githubusercontent.com/Faheem5555/faheem-portfolio/main/assets/bg-dashboard.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+.btn-primary{
+  background:#3b82f6;
+  padding:10px 18px;
+  color:#fff;
+  border-radius:6px;
+  text-decoration:none;
 }
 
-.header h1 {
-  font-size: 2.6rem;
-  font-weight: 700;
+.btn-secondary{
+  border:1px solid #93c5fd;
+  color:#93c5fd;
+  padding:10px 18px;
+  border-radius:6px;
+  text-decoration:none;
 }
 
-.header p {
-  margin-top: 14px;
-  font-size: 1.05rem;
-  opacity: 0.95;
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
 }
 
-/* =========================
-   PROFILE IMAGE
-========================= */
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #60a5fa;
-  margin: 22px auto 14px;
-  display: block;
-  box-shadow: 0 0 20px rgba(96, 165, 250, 0.45);
+.card{
+  background:#020617;
+  padding:16px;
+  border-radius:12px;
+  border:1px solid #1e293b;
 }
 
-/* =========================
-   HEADER ICONS
-========================= */
-.links {
-  margin-top: 16px;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:8px;
 }
 
-.links a {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 20px;
-  text-decoration: none;
-  transition: transform 0.25s ease, color 0.25s ease;
+/* GITHUB ICON */
+.icon-link{
+  display:inline-flex;
+  width:36px;
+  height:36px;
+  align-items:center;
+  justify-content:center;
+  color:#e5e7eb;
+  border-radius:50%;
+  margin-top:8px;
+}
+.icon-link:hover{
+  background:#1e293b;
+  color:#60a5fa;
+  transform:scale(1.15);
 }
 
-.links a:hover {
-  color: #93c5fd;
-  transform: translateY(-3px);
+/* MENU */
+.menu-container{
+  position:fixed;
+  top:20px;
+  left:20px;
+  z-index:999;
 }
 
-/* =========================
-   HEADER CTA BUTTONS
-========================= */
-.header-actions {
-  margin-top: 26px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
+.hamburger span{
+  display:block;
+  width:26px;
+  height:3px;
+  background:#fff;
+  margin:6px 0;
 }
 
-.btn-primary {
-  padding: 10px 18px;
-  background: #3b82f6;
-  color: #ffffff;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 6px 18px rgba(59,130,246,0.35);
-  transition: all 0.25s ease;
+.menu{
+  display:none;
+  background:#020617;
+  border-radius:10px;
+  padding:10px;
 }
+.menu.open{display:block}
 
-.btn-primary:hover {
-  background: #2563eb;
-  transform: translateY(-2px);
+.menu a{
+  display:block;
+  color:#e5e7eb;
+  padding:8px;
+  text-decoration:none;
 }
+.menu a:hover{background:#1e293b}
 
-.btn-secondary {
-  padding: 10px 18px;
-  border: 1px solid #93c5fd;
-  color: #93c5fd;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-
-.btn-secondary:hover {
-  background: #93c5fd;
-  color: #020617;
-}
-
-/* =========================
-   HAMBURGER MENU
-========================= */
-.menu-container {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 9999;
-}
-
-.hamburger {
-  width: 26px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  height: 3px;
-  background: #e5e7eb;
-  margin: 6px 0;
-  border-radius: 3px;
-}
-
-.menu {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 10px;
-  padding: 10px;
-  display: none;
-  min-width: 160px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
-
-.menu a {
-  display: block;
-  padding: 10px 12px;
-  color: #e5e7eb;
-  text-decoration: none;
-  font-size: 0.9rem;
-  border-radius: 6px;
-}
-
-.menu a:hover {
-  background: #1e293b;
-  color: #93c5fd;
-}
-
-.menu.open {
-  display: block;
-}
-
-/* =========================
-   HEADINGS
-========================= */
-h2 {
-  margin-bottom: 22px;
-  font-size: 1.8rem;
-  color: #60a5fa;
-  border-left: 5px solid #3b82f6;
-  padding-left: 12px;
-}
-
-/* =========================
-   SKILLS
-========================= */
-.skills-group {
-  margin-bottom: 26px;
-}
-
-.skills-group h4 {
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-  color: #93c5fd;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.skills span {
-  background: #1e293b;
-  padding: 7px 14px;
-  border-radius: 20px;
-  margin: 6px;
-  font-size: 0.85rem;
-  color: #bfdbfe;
-  border: 1px solid #334155;
-}
-
-/* =========================
-   CLIENTS
-========================= */
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 26px;
-  margin-top: 30px;
-}
-
-.client-card {
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 12px;
-  padding: 16px;
-  text-align: center;
-}
-
-.client-card img {
-  width: 82px;
-  height: 32px;
-  object-fit: contain;
-  opacity: 0.9;
-}
-
-/* =========================
-   PROJECTS
-========================= */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-}
-
-.card {
-  background: #020617;
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid #1e293b;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.6);
-}
-
-.project-card img {
-  width: 100%;
-  max-height: 145px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-/* =========================
-   PROJECT GITHUB ICON
-========================= */
-.icon-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  margin-top: 6px;
-  border-radius: 50%;
-  font-size: 19px;
-  color: #e5e7eb;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-
-.icon-link:hover {
-  background: #1e293b;
-  color: #60a5fa;
-  transform: scale(1.15);
-}
-
-/* =========================
-   CONTACT
-========================= */
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.contact-item i {
-  color: #60a5fa;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-  font-size: 0.85rem;
-  color: #cbd5f5;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 2.1rem;
-  }
-
-  .header-actions {
-    flex-direction: column;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
+/* FOOTER */
+.footer{
+  padding:20px;
+  text-align:center;
+  background:#020617;
 }
